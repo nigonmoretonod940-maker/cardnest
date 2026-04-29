@@ -9,38 +9,48 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0B1D3A;
+    background: linear-gradient(135deg, #0B1D3A, #102f5c);
     color: white;
     text-align: center;
 }
 
+/* 标题区域 */
 .container {
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 h1 {
-    font-size: 42px;
+    font-size: 50px;
 }
 
 .highlight {
     color: #25D366;
 }
 
+/* 按钮动画 */
 .button {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 25px;
+    padding: 15px 30px;
     background: #25D366;
     color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
+.button:hover {
+    transform: scale(1.05);
+    background: #1ebc5b;
+}
+
+/* 模块 */
 .section {
-    margin-top: 50px;
+    padding: 60px 20px;
 }
 
+/* 卡片布局 */
 .cards {
     display: flex;
     justify-content: center;
@@ -48,13 +58,35 @@ h1 {
     flex-wrap: wrap;
 }
 
+/* 卡片动画 */
 .card {
-    width: 250px;
+    width: 260px;
+    background: #132a4d;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
 }
 
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* 图片 */
 .card img {
     width: 100%;
     border-radius: 10px;
+}
+
+/* 信任模块 */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    font-size: 18px;
 }
 </style>
 
@@ -62,6 +94,7 @@ h1 {
 
 <body>
 
+<!-- 顶部 -->
 <div class="container">
     <h1>Card<span class="highlight">Nest</span></h1>
     <p>Simple • Safe • Transparent</p >
@@ -72,7 +105,7 @@ h1 {
     </a >
 </div>
 
-<!-- 图片区域（关键就在这里） -->
+<!-- 图片卡片 -->
 <div class="section">
     <h2>Supported Cards</h2>
 
@@ -94,18 +127,24 @@ h1 {
     </div>
 </div>
 
+<!-- 流程 -->
 <div class="section">
     <h2>How It Works</h2>
     <p>1. Send → 2. Check → 3. Done</p >
 </div>
 
+<!-- 信任模块 -->
 <div class="section">
     <h2>Why Choose Us</h2>
-    <p>✔ Secure</p >
-    <p>✔ Fast</p >
-    <p>✔ Trusted</p >
+
+    <div class="features">
+        <div class="feature">✔ Secure</div>
+        <div class="feature">✔ Fast</div>
+        <div class="feature">✔ Trusted</div>
+    </div>
 </div>
 
+<!-- 引导 -->
 <div class="section">
     <h2>Get Started</h2>
     <p>Start small 👍</p >
